@@ -67,31 +67,6 @@ if make_choice != "ALL":
 
 
 
-#TD_Width_dataset = pd.read_csv('Combined_data_V1.csv',encoding="cp1252") 
-#
-#option = st.selectbox('Please select the SKU',TD_Width_dataset['ct_code'].unique())
-#
-#TD_subset = TD_Width_dataset.loc[TD_Width_dataset['ct_code']==option ,:]
-#
-##TD_subset = TD_Width_dataset
-#
-#p_001=TD_subset['TD Width Variation'].quantile(0.001)
-#p_995= TD_subset['TD Width Variation'].quantile(0.995)
-#TD_subset['TD Width Variation'].clip(lower=p_001, upper=p_995, inplace=True)
-#
-#TD_subset['Spec Details'] = TD_subset['TD Width Variation'].apply(lambda x:'Outside Threshold' if x<=-2 else 'Within Spec')
-#
-#st.write(TD_subset.groupby(['Spec Details']).\
-#    agg({'Rejected Tyres': ['mean'],
-#        'BARCODE': ['count']}).reset_index())
-#
-###########Charts#########################
-#var = option
-#
-#fig = go.Figure()
-#fig = px.violin(TD_subset, y='TD Width Variation',color="Rejected Tyres" ,box=True)
-#fig.update_layout(title_text= "Rejected Tyres")
-#st.plotly_chart(fig,use_container_width=True)
 
 
 
